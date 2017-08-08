@@ -2,9 +2,7 @@ language: java
  dist: trusty
  sudo: false
 
- cache:
-   yarn: true
-   directories:
- - $HOME/.m2
+before_install:
+ - chmod +x ./mvnw
 
- script: ./mvnw clean verify
+script: ./mvnw clean verify
